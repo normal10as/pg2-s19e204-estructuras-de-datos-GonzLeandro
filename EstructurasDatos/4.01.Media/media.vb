@@ -5,9 +5,15 @@ Module media
     Dim media As Integer
     Sub Main(args As String())
         calcular()
-        Console.WriteLine("El contenido de la array es: ")
+        Console.Write("El contenido de la array es: ")
+        For index = 0 To array.Length - 1
+            Console.Write(array(index) & " ")
+        Next
+        Console.WriteLine()
+        Console.WriteLine("Elemento:  -  (Elemento  -  Media  =   Desviacion)")
+
         For Each n In array
-            Console.WriteLine("Elemento: " & n & " - (Elemento: " & n & " - Media: " & (media / array.Count) & " = " & n - (media / array.Count) & ")")
+            Console.WriteLine("Elemento: " & n & " - (Elemento: " & n & " -  " & (media / array.Count) & " = " & n - (media / array.Count) & ")")
         Next
     End Sub
     Sub calcular()
